@@ -19,5 +19,6 @@ def reduce(source_array, starting_number = nil)
     num_1 = yield(num_1, source_array[i])
     i += 1
   end
+  num_1
 end 
 
