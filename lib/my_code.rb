@@ -8,16 +8,16 @@ def map(source_array)
 end 
 
 def reduce(source_array, starting_number = nil)
-  if !starting_number
-    returned_value = nil
-    source_array.length.times do |index|
-      returned_value = yield(returned_value, source_array[index])
-    end 
+  if starting_number
+    return_value = starting_number
+    i = 0
   else
-    returned_value = starting_number
-    source_array.length.times do |index|
-      returned_value = yield(returned_value, source_array[index])
-    end
-  end
-  returned_value
+    return_value = source_array[0]
+    i = 1
+  end 
+  while i < source_array.length do
+    return_value = yield(return_value, source_array[i])
+    i += 1
+  end 
+  return_value
 end 
