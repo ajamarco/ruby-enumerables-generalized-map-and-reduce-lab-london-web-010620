@@ -13,7 +13,11 @@ def reduce(source_array, starting_number = 0)
     source_array.length.times do |index|
       returned_value = yield(returned_value, source_array[index])
     end 
-    
+  else
+    returned_value = starting_number
+    source_array.length.times do |index|
+      returned_value = yield(returned_value, source_array[index])
+    end
   end
   returned_value
 end 
