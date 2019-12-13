@@ -7,13 +7,16 @@ def map(source_array)
   total_array
 end 
 
-def reduce(source_array, starting_number = 0)
-  if starting_number != 0 
-    returned_value = 0
-    source_array.length.times do |index|
-      returned_value += yield(source_array[index],starting_number)
-    end
-    return returned_value
-  end 
+def reduce(source_array, starting_number = nil)
+  if starting_number
+    num_1 = starting_number
+    i = 0 
+  else
+    num_1 = source_array[0]
+    i = 1
+  end
+  while i < source_array.length do
+    yield(source_array[i], num_1)
+  end
 end 
 
