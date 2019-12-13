@@ -8,7 +8,7 @@ def map(source_array)
 end 
 
 def reduce(source_array, starting_number = nil)
-  returned_value = nil
+  returned_value = 0
   if !starting_number
     source_array.length.times do |index|
       returned_value = yield(returned_value, source_array[index])
