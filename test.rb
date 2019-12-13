@@ -25,3 +25,4 @@ end
 
 
 newmethod(source_array){|memo,n| memo || n }
+newermethod(source_array){|memo,n| memo || n }
