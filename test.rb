@@ -10,7 +10,7 @@ def newmethod(array)
   array.length.times do |index|
     return_value = yield(return_value, array[index])
   end
-  return_value
+  puts return_value
 end
 
 def newermethod(array)
@@ -20,7 +20,7 @@ def newermethod(array)
     return_value = yield(return_value, array[index])
     index += 1
   end 
-  return_value
+  puts return_value
 end
 
 
