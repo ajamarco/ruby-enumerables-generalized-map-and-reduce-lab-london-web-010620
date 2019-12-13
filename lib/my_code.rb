@@ -21,4 +21,3 @@ def reduce(source_array, starting_number = nil)
   end
   returned_value
 end 
-
