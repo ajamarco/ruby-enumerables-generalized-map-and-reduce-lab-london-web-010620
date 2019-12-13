@@ -1,7 +1,4 @@
-var1 = nil 
-var2 = 3 && var1
 
-p var2
 
 source_array = [ false, nil, nil, nil, true]
 
